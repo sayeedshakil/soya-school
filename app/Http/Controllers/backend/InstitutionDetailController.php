@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreInstitutionDetailsRequest;
+use App\Http\Requests\UpdateInstitutionDetailsRequest;
 use App\Models\InstitutionDetail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
@@ -41,7 +43,7 @@ class InstitutionDetailController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreInstitutionDetailsRequest $request)
     {
         abort_if(Gate::denies('site_configuration_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
@@ -99,7 +101,7 @@ class InstitutionDetailController extends Controller
      * @param  \App\Models\InstitutionDetail  $institutionDetail
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, InstitutionDetail $institutionDetail)
+    public function update(UpdateInstitutionDetailsRequest $request, InstitutionDetail $institutionDetail)
     {
         abort_if(Gate::denies('site_configuration_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
         if ($request->has('aboutus_image')) {

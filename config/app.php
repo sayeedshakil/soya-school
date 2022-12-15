@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Soya School and College (Committed to Building the Foundation for excellence in higher Education)'),
 
     /*
     |--------------------------------------------------------------------------

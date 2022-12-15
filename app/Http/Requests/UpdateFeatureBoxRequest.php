@@ -25,7 +25,7 @@ class UpdateFeatureBoxRequest extends FormRequest
     {
         return [
             'feature_title'     => 'required',
-            'feature_image'     => 'required|image|mimes:jpeg,jpg,png|max:512',
+            'feature_image'     => 'image|mimes:jpeg,jpg,png|max:512',
             'feature_subtitle1'      => 'nullable',
             'feature_subtitle2'      => 'nullable',
             'feature_subtitle3'      => 'nullable',

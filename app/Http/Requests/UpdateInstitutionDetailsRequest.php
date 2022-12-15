@@ -27,14 +27,14 @@ class UpdateInstitutionDetailsRequest extends FormRequest
         return [
             'aboutus_title'     => 'required',
             'aboutus_description'     => 'required',
-            'aboutus_image'     => 'required|image|mimes:jpeg,jpg,png|max:3072',
+            'aboutus_image'     => 'image|mimes:jpeg,jpg,png|max:3072',
             'contactus_school_name'      => 'required',
             'contactus_address'      => 'required',
             'contactus_mobile'      => 'required',
             'contactus_telephone'      => 'nullable',
             'contactus_email'=>[
-                'email','nullable',
-                Rule::unique('institution_details')->ignore($this->institutionDetails)]
+                'email',
+                Rule::unique('institution_details')->ignore($this->institution_detail)]
         ];
     }
 }

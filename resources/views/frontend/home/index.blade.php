@@ -220,11 +220,11 @@
                         <div class="col-md-8">
                             <div class="card-body">
                             <h5 class="card-title bg-success text-light p-1 rounded text-center"> {{ $item->feature_title ?? '' }}</h5>
-                            <ol type="a" class="list-group list-group-flush list-group-numbered">
+                            <ul type="a" class="list-group list-group-flush list-group-numbered">
                                 <a href="{{ $item->feature_subtitle_link1 ?? '' }}" class="list-group-item list-group-item-action">{{ $item->feature_subtitle1 ?? '' }}</a>
                                 <a href="{{ $item->feature_subtitle_link2 ?? '' }}" class="list-group-item list-group-item-action">{{ $item->feature_subtitle2 ?? '' }}</a>
                                 <a href="{{ $item->feature_subtitle_link3 ?? '' }}" class="list-group-item list-group-item-action">{{ $item->feature_subtitle3 ?? '' }}</a>
-                            </ol>
+                            </ul>
                             </div>
                         </div>
                     </div>

@@ -102,6 +102,7 @@ class FeatureBoxController extends Controller
     public function update(UpdateFeatureBoxRequest $request, FeatureBox $featureBox)
     {
         abort_if(Gate::denies('site_configuration_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+        //dd($request);
         if ($request->has('feature_image')) {
             Storage::delete('public/images/featureBox/' . $featureBox->feature_image);
 
@@ -109,7 +110,7 @@ class FeatureBoxController extends Controller
             $request->file('feature_image')->storeAs('images/featureBox/', $filename, 'public');
         }
         $featureBox->update([
-            'aboutus_title' => $request->aboutus_title,
+            'feature_title' => $request->feature_title,
             'is_active' => $request->is_active,
             'feature_image' => $filename ?? $featureBox->feature_image,
             'feature_subtitle1' => $request->feature_subtitle1,

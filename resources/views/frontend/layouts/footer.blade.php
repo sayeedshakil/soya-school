@@ -24,14 +24,14 @@
         ></a>
 
         <!-- Linkedin -->
-        {{-- <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
           ><i class="fab fa-linkedin-in"></i
-        ></a> --}}
+        ></a>
 
         <!-- Github -->
-        {{-- <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
           ><i class="fab fa-github"></i
-        ></a> --}}
+        ></a>
       </section>
       <!-- Section: Social media -->
     </div>

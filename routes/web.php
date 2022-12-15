@@ -105,11 +105,22 @@ Route::group(['middleware'=>['auth', 'authGate'],'prefix'=>'backend', 'as'=>'bac
 Route::get('/clear', function() {
 
     Artisan::call('cache:clear');
-    Artisan::call('config:cache');
+    // Artisan::call('config:cache');
+    Artisan::call('config:clear');
     Artisan::call('view:clear');
     // Artisan::call('route:cache');
     // Artisan::call('migrate');
     return "Cleared!";
     });
+
+    Route::get('/storage', function() {
+
+    Artisan::call('storage:link');
+    return "storage linked!";
+    });
+    // Route::get('/migrate_fresh_seed',function(){
+    //     Artisan::call('migrate:fresh');
+    //     Artisan::call('migrate:seed');
+    // });
 
 
